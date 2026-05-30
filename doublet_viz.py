@@ -39,9 +39,8 @@ def visualize_doublet(layer, q_ls, spacing_m, reinj_T_C, T0_C,
         return u, v
 
     # --- velocity grid for streamlines ---
-    # 1000 m field of view (axes = 2*span); widened only if the wells
-    # (at x = +/- D/2) would otherwise fall outside the frame.
-    span = max(500.0, 0.6*D)
+    # Fixed field of view: x and y both span -1000 .. +1000 m.
+    span = 1000.0
     gx = np.linspace(-span, span, 220)
     gy = np.linspace(-span, span, 220)
     GX, GY = np.meshgrid(gx, gy)
