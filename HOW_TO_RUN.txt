@@ -1,0 +1,65 @@
+========================================================================
+VGGT-1 WEB APP  —  STEP-BY-STEP (written for a complete beginner)
+========================================================================
+
+WHAT THIS IS
+  A web page version of your VGGT-1 model. You move sliders / type numbers
+  on the left, press "Run model", and the results + charts appear on the
+  right. It uses your existing economy_VGGT.py unchanged.
+
+------------------------------------------------------------------------
+PART 1 — RUN IT ON YOUR OWN COMPUTER (10 minutes, do this first)
+------------------------------------------------------------------------
+1. Install Python 3.11+ from https://www.python.org/downloads/
+   (On the first install screen TICK the box "Add Python to PATH".)
+
+2. Put all the files from this folder into one folder, e.g. C:\vggt_webapp
+
+3. Open a terminal IN that folder:
+   - Windows: open the folder in File Explorer, click the address bar,
+     type  cmd  and press Enter.
+   - Mac: right-click the folder > "New Terminal at Folder".
+
+4. Install the libraries (type this one line, press Enter, wait):
+       pip install -r requirements.txt
+
+5. Start the app (type this one line, press Enter):
+       streamlit run streamlit_app.py
+
+6. Your web browser opens automatically at  http://localhost:8501
+   If it doesn't, copy that address into your browser.
+
+7. Use it: set inputs on the left, press "▶ Run model". Done.
+   To stop: go back to the terminal and press  Ctrl + C.
+
+------------------------------------------------------------------------
+PART 2 — PUT IT ONLINE FOR FREE (so colleagues open a link)
+------------------------------------------------------------------------
+Easiest option: Streamlit Community Cloud (free, no servers to manage).
+
+1. Make a free account at https://github.com  (this stores the code).
+2. Make a free account at https://share.streamlit.io  (log in with GitHub).
+3. Create a new GitHub repository (button "New"), name it e.g. vggt-app,
+   set it to Private, and click "uploading an existing file" — drag in
+   ALL the files from this folder (including requirements.txt and
+   streamlit_app.py). Commit.
+4. Go to https://share.streamlit.io > "New app" > pick your repo >
+   main file = streamlit_app.py > Deploy.
+5. After ~2 minutes you get a link like
+       https://vggt-app.streamlit.app
+   Share that link. To keep it private, in the app's Settings > Sharing
+   you can restrict who can view it by email.
+
+------------------------------------------------------------------------
+PART 3 — PUT IT ON GOOGLE CLOUD (later, if the company wants it internal)
+------------------------------------------------------------------------
+Same app, just hosted on Google Cloud Run with company login. This needs
+a Dockerfile and the gcloud tool — more setup than Part 2. Do Part 2
+first to validate; ask me for the Cloud Run recipe when you're ready.
+
+------------------------------------------------------------------------
+NOTES
+  - This demo is VGGT-1 only. Once you're happy, the same app can host all
+    five wells with a "choose well" dropdown — that needs the shared-module
+    consolidation we discussed, so the five packages share one code base.
+  - Nothing here changes your original VGGT1_full_package files.

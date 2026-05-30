@@ -1,0 +1,6 @@
+streamlit
+numpy
+scipy
+matplotlib
+pandas>=2.1
+openpyxl
