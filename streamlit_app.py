@@ -280,7 +280,7 @@ with tab_res:
         try:
             ba_png = DD.plot_barends_comparison(ba, os.path.join(tmp, "barends_compare.png"),
                                                 well_label="VinGT-1")
-            st.image(ba_png, width=DISPLAY_W,
+            st.image(ba_png, width=int(DISPLAY_W*1.5),
                      caption=("GS vs Barends (2010) — longitudinal-dispersion comparison  "
                               f"(a_L = {ba['a_L']:.1f} m, "
                               f"{'cap+base' if ba['include_underburden'] else 'cap-only'} bleeding)"))

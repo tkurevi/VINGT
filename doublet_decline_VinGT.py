@@ -293,7 +293,7 @@ def plot_barends_comparison(d, png_path, well_label=""):
            f"D = {d['spacing_m']:.0f} m, Q_avg = {d['avg_flow_ls']:.1f} L/s, Δt = {d['years']:.0f} yr   ({a_txt})")
     fig.suptitle(ttl, fontsize=11, y=1.00)
     fig.tight_layout()
-    fig.savefig(png_path, dpi=140, bbox_inches='tight')
+    fig.savefig(png_path, dpi=220, bbox_inches='tight')
     plt.close(fig)
     return png_path
 
